@@ -2,6 +2,18 @@ micro-http
 ==========
 µHTTP is an overly simplified protocol for HTTP
 
+µHTTP is designed for human with the idea that a good standard for expressing
+HTTP request is essential when you do not have access to high-level tools like a 
+full-featured web browser. The goals this standard has to focus on are:
+
+* to use a minimum of characters
+* to be easy to remember for a human
+* to provide an extensible syntax
+* to abstract the complexity of underlied protocol
+* to be independant of the protocol version
+
+The grammar is still under deep reflexion.
+
 Grammar
 -------
 µHTTP is defined using [extended BNF grammer](http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form).
