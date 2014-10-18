@@ -1,0 +1,14 @@
+key      = ;
+value    = ;
+dict     = key, ':', value, { ',', dict };
+method   = 'g' | 'p' | 'p' | 'd';
+ip       = ; (* see ip specification for ipv4 and ipv6 *)
+domain   = { domain, '.' }, [a-Z0-9]; (* domain and subdomain *)
+host     = ip | domain, ':', port;
+uri      = ; (* see uri specifications *)
+headers  = '%', dict;
+query    = '?', dict;
+body     = '&', value;
+status   = 'ok' | 'not found' | '';
+request  = method, host, '/', uri, [ headers ], [ query ], [ body ];
+response = status, ': ', body;
