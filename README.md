@@ -1,6 +1,6 @@
 micro-http
 ==========
-µHTTP is an overly simplified protocol for HTTP
+µHTTP is an overly simplified interface for HTTP
 
 µHTTP is designed for human with the idea that a good standard for expressing
 HTTP request is essential when you do not have access to high-level tools like a 
