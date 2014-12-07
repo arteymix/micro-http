@@ -37,13 +37,16 @@ response = status, ': ', body;
 Examples
 --------
 Get latest [reddit](http://reddit.com) frontpage posts
+```
+g www.reddit.com
+```
 
-  g www.reddit.com
-  
 Search through reddit
+```
+g www.reddit.com/search ? q: search terms, sort: relevance, t: all 
+```
 
-  g www.reddit.com/search ? q: search terms, sort: relevance, t: all 
-  
 Same request, compressed
-
-  g www.reddit.com/search?q:search terms,sort:relevance,t:all
+```
+g www.reddit.com/search?q:search terms,sort:relevance,t:all
+```
