@@ -1,5 +1,6 @@
 micro-http
 ==========
+
 µHTTP is an overly simplified interface for HTTP
 
 µHTTP is designed for human with the idea that a good standard for expressing
@@ -13,6 +14,7 @@ full-featured web browser. The goals this standard has to focus on are:
 * to be independant of the protocol version
 
 The grammar is still under deep reflexion.
+
 
 Grammar
 -------
@@ -34,19 +36,30 @@ request  = method, host, '/', uri, [ headers ], [ query ], [ body ];
 response = status, ': ', body;
 ```
 
+
 Examples
 --------
+
 Get latest [reddit](http://reddit.com) frontpage posts
+
 ```
 g www.reddit.com
 ```
 
-Search through reddit
+Search through reddit (66 characters)
+
 ```
 g www.reddit.com/search ? q: search terms, sort: relevance, t: all 
 ```
 
-Same request, compressed
+Same request, compressed (59 characters)
+
 ```
 g www.reddit.com/search?q:search terms,sort:relevance,t:all
+```
+
+Same request, using HTTP/1.1 (73 characters including the CRLF end of line)
+
+```http
+GET www.reddit.com/search?q=search%2terms&sort=relevance&t=all HTTP/1.1
 ```
